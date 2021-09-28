@@ -1,0 +1,25 @@
+{
+  "name": "Gabriel_Fontana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CR4ZYZG/Gabriel_Fontana.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CR4ZYZG/Gabriel_Fontana/issues"
+  },
+  "homepage": "https://github.com/CR4ZYZG/Gabriel_Fontana#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6"
+  }
+}
