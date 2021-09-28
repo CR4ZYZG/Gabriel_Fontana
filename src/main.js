@@ -40,10 +40,24 @@ console.log(index) */
 
 //------------------------------------------------
 
-const cars = ["fusca", "civic", "hb20"]
+/* const cars = ["fusca", "civic", "hb20"]
 
 const hasFusca = cars.some(function (car) {
     return car == "bmw"
 })
 
-console.log(hasFusca)
+console.log(hasFusca) */
+
+//------------------------------------------------- Arrow Functions---
+const todos = [
+    { text: 'lavar a louça', done: true },
+    { text: 'apanhar o lixo', done : false },
+    { text: 'dobrar as roupas', done : false },
+]
+
+/* const doneTodos = todos.filter((todo) => {
+    return todo.done
+}) */
+const doneTodos = todos.filter((todo) => todo.done)
+
+console.log(doneTodos)

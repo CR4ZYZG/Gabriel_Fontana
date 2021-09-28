@@ -40,8 +40,30 @@ console.log(find) */
 
 console.log(index) */
 //------------------------------------------------
-var cars = ["fusca", "civic", "hb20"];
-var hasFusca = cars.some(function (car) {
-  return car == "bmw";
+
+/* const cars = ["fusca", "civic", "hb20"]
+
+const hasFusca = cars.some(function (car) {
+    return car == "bmw"
+})
+
+console.log(hasFusca) */
+//------------------------------------------------- Arrow Functions---
+var todos = [{
+  text: 'lavar a louça',
+  done: true
+}, {
+  text: 'apanhar o lixo',
+  done: false
+}, {
+  text: 'dobrar as roupas',
+  done: false
+}];
+/* const doneTodos = todos.filter((todo) => {
+    return todo.done
+}) */
+
+var doneTodos = todos.filter(function (todo) {
+  return todo.done;
 });
-console.log(hasFusca);
+console.log(doneTodos);
