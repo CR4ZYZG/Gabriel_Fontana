@@ -18,7 +18,7 @@ Funcionalidade: Barra de pesquisa
         
         E Entrar no canal com nome de "Compasso UOL"
     
-    Cenário: verificar quantidade de visualizações 
+    Esquema do Cenário: verificar quantidade de visualizações 
 
         Quando acessar a aba "sobre"
 
