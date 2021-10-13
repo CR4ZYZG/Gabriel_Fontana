@@ -1,34 +1,37 @@
 #laguange:pt
 
-Funcionalidade: Barra de pesquisa
-
-
-
-    Contexto: Estar na página inicial do youtube
-
-        Dado que esteja na página inicial do youtube
-
-
+Funcionalidade: Informações de canais no youtube
 
     Cenário: Buscar canal da Compasso UOL
 
+        Dado que esteja na página inicial do youtube
+
         Quando pesquisar por "Compasso UOL"
 
-        Então deverá ser exibido o canal "Compasso UOL", e outros resultados relacionados 
+        E acessar o canal Compasso UOL
         
-        E Entrar no canal com nome de "Compasso UOL"
-    
-    Esquema do Cenário: verificar quantidade de visualizações 
-
-        Quando acessar a aba "sobre"
-
-        Então valida se o número de vizualizações é "<número>"
+        E acessar a aba "sobre"
         
-        E retorna a mensagem "<mensagem>"
+        Então valida se o número de vizualizações é maior que 30000
 
-        Exemplos:
-        | número | mensagem                          |
-        | <30000 | tem menos de 30 mil visualizações |
-        | >30000 | tem mais de 30 mil visualizações  |
+
+    Esquema do Cenário: validar numero de vizualizações de canais
+
+        Dado que esteja na página home
+
+        Quando pesquisar por "<canal>"
+
+        E acessar o canal "<canal>"
+        
+        E acessar a aba "sobre"
+
+        Então o numero de visualizações deverá ser maior que "<visualizaçoes>"
+
+            Exemplos:
+            | canal            | vizualizações |
+            | compasso uol     | 30.000        |
+            | porta dos fundos | 1.000.000.000 |
+
+
 
         
