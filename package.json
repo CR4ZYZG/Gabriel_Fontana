@@ -23,6 +23,7 @@
     "node": "^17.0.1"
   },
   "devDependencies": {
-    "cypress": "^8.7.0"
+    "cypress": "^8.7.0",
+    "faker": "^5.5.3"
   }
 }
