@@ -20,5 +20,8 @@
   "homepage": "https://github.com/CR4ZYZG/Gabriel_Fontana#readme",
   "dependencies": {
     "node": "^17.0.1"
+  },
+  "devDependencies": {
+    "cypress": "^8.7.0"
   }
 }
