@@ -1,15 +1,19 @@
 /// <reference types="cypress" />
+import LoginSauce from "../pages/sauce_login.page"
 
 describe('automações no site Sauce Demo', () => {
     beforeEach(() => {
-        cy.visit(`${Cypress.env('BASE_URL')}`)
+        LoginSauce.acessarSauce()
+    })
+    it.only('teste com outros users', () => {
+        LoginSauce.logar(pbmUser)
     })
 
     context('produto dentro do carrinho', () => {
         beforeEach(() => {
             const user = 'standard_user'
 
-            cy.logar(user)
+            LoginSauce.logar(user)
             cy.contextProdutoNoCarrinho()
         })
 
