@@ -27,3 +27,8 @@ export const CART_ELE ={
     BTN_ADDTOCART : '[data-test=add-to-cart-sauce-labs-backpack]',
     BTN_REMOVE : '[data-test=remove-sauce-labs-backpack]'
 }
+
+export const HOME = {
+    BTN_BURGUER : '#react-burger-menu-btn',
+    BTN_LOGOUT : '#logout_sidebar_link'
+}

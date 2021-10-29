@@ -2,12 +2,12 @@
 import LoginSauce from "../pages/sauce_login.page"
 import CheckoutSauce from "../pages/sauce_checkout.page"
 import CartSauce from "../pages/sauce_cart.page"
+import HomeSauce from "../pages/sauce_home.page"
 
 describe('automações no site Sauce Demo', () => {
     beforeEach(() => {
         LoginSauce.acessarSauce()
     })
-
     context('produto dentro do carrinho', () => {
         beforeEach(() => {
             
@@ -26,7 +26,13 @@ describe('automações no site Sauce Demo', () => {
         })
 
         it('remover itens do carrinho', () => {
+            CartSauce.acessarCarrinho()
             CartSauce.removerCarrinho()
         })
+    })
+    it.only('realizar o logout', () => {
+        LoginSauce.logar()
+        HomeSauce.sair()
+
     })
 })
