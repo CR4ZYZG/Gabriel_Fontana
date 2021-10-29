@@ -1,30 +1,32 @@
 /// <reference types="cypress" />
 import LoginSauce from "../pages/sauce_login.page"
+import CheckoutSauce from "../pages/sauce_checkout.page"
+import CartSauce from "../pages/sauce_cart.page"
 
 describe('automações no site Sauce Demo', () => {
     beforeEach(() => {
         LoginSauce.acessarSauce()
     })
-    it.only('teste com outros users', () => {
-        LoginSauce.logar(pbmUser)
-    })
 
     context('produto dentro do carrinho', () => {
         beforeEach(() => {
-            const user = 'standard_user'
-
-            LoginSauce.logar(user)
-            cy.contextProdutoNoCarrinho()
+            
+            LoginSauce.logar()
+            CartSauce.adicionarNoCarrinho()
         })
 
         it('deve realizar o checkout de informações invalidas', () => {
-            cy.acessarCarrinho()
+            CartSauce.acessarCarrinho()
             cy.checkoutWrongInfo()
         })
 
         it('deve realizar o checkout de informações validas', () => {
-            cy.acessarCarrinho()
-            cy.checkoutCorrectInfo()
+            CartSauce.acessarCarrinho()
+            CheckoutSauce.checkout()            
+        })
+
+        it('remover itens do carrinho', () => {
+            CartSauce.removerCarrinho()
         })
     })
 })
